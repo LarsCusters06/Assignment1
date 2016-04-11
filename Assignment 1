@@ -1,0 +1,23 @@
+Assignment Day1
+
+SQL
+
+SELECT Customers.CustomerName FROM [Customers]
+JOIN [Orders] ON Customers.CustomerID = Orders.CustomerID
+JOIN [OrderDetails] ON Orders.OrderID = OrderDetails.OrderID
+JOIN [Products] ON OrderDetails.ProductID = Products.ProductID
+WHERE ProductName = 'Gorgonzola Telino'
+
+CREATE TABLE Mutations
+(
+MutationID int,
+Position int,
+Alt allele varchar(255)
+);
+
+CREATE TABLE Samples
+(
+SampleID int,
+MutationID int,
+Genotype varchar(255)
+);
